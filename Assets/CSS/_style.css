@@ -1,0 +1,113 @@
+/* Universal */
+
+*
+{
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+/* Background */
+
+._background_Container
+{
+
+    width: 100%;
+    height: 100vh;
+
+}
+
+._sky
+{
+    
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(/Assets/_Images/_sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+._sky img
+{
+    
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    top: 30px;
+    right: -300px;
+    opacity: 0.8;
+    animation: _cloud_Animation 5s linear infinite;
+
+}
+
+._sky :nth-child(2)
+{
+    
+    top: 50px;
+    animation-delay: 3s;
+
+}
+
+@keyframes _cloud_Animation
+{
+
+    from
+    {
+
+        right: -300px;
+
+    }
+    to
+    {
+
+        right: 1366px;
+
+    }
+
+}
+
+._mountain_Images
+{
+
+    position: absolute;
+    bottom: 0px;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    user-select: none;
+
+}
+
+._mountain_Images img
+{
+
+    /* background-color: rgba(31, 3, 3, 0.438); */
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+
+}
+
+._mountain_Images img:nth-child(2)
+{
+
+    left: -1366px;
+    /* background-color: rgba(255, 255, 255, 0.411); */
+
+}
+
+._darkness
+{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background: url(/Assets/_Images/_darkness.png);
+
+}
