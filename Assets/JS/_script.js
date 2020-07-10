@@ -111,3 +111,250 @@ setInterval(() =>
     }
     
 }, 1000 * 60);
+
+// Pipe.
+
+// Pipe down
+
+const _down_Pipe_Container = document.querySelector("._pipe_Container ._down_Pipe_Container");
+
+let _random_Height_Top;
+
+for(let _index = 0, _left = 30; _index < _down_Pipe_Container.children.length; _index++, _left += 200)
+{
+
+    _down_Pipe_Container.children[_index].style.left = `${_left}px`;
+    _down_Pipe_Container.children[_index].setAttribute("draggable", "false");
+
+    _random_Height_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+    _down_Pipe_Container.children[_index].style.height = `${_random_Height_Top}px`;
+
+}
+let _left_For_Animation = 5;
+
+function _pipe_Down_Animation()
+{
+
+    // Pipe 1 to 7 down left to right.
+    
+    _down_Pipe_Container.children[0].style.left = parseInt(_down_Pipe_Container.children[0].style.left) - _left_For_Animation + "px";
+    _down_Pipe_Container.children[1].style.left = parseInt(_down_Pipe_Container.children[1].style.left) - _left_For_Animation + "px";
+    _down_Pipe_Container.children[2].style.left = parseInt(_down_Pipe_Container.children[2].style.left) - _left_For_Animation + "px";
+    _down_Pipe_Container.children[3].style.left = parseInt(_down_Pipe_Container.children[3].style.left) - _left_For_Animation + "px";
+    _down_Pipe_Container.children[4].style.left = parseInt(_down_Pipe_Container.children[4].style.left) - _left_For_Animation + "px";
+    _down_Pipe_Container.children[5].style.left = parseInt(_down_Pipe_Container.children[5].style.left) - _left_For_Animation + "px";
+    _down_Pipe_Container.children[6].style.left = parseInt(_down_Pipe_Container.children[6].style.left) - _left_For_Animation + "px";
+
+    if (parseInt(_down_Pipe_Container.children[0].style.left) == -105)
+    {
+
+        _down_Pipe_Container.children[0].style.left = 1360 + "px";
+        _random_Height_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _down_Pipe_Container.children[0].style.height = `${_random_Height_Top}px`;
+
+        
+    }
+
+    // Pipe two down left to right.
+
+    if (parseInt(_down_Pipe_Container.children[1].style.left) == -105)
+    {
+
+        _down_Pipe_Container.children[1].style.left = 1360 + "px";
+        _random_Height_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _down_Pipe_Container.children[1].style.height = `${_random_Height_Top}px`;
+
+        
+    }
+
+    // Pipe three down left to right.
+
+    if (parseInt(_down_Pipe_Container.children[2].style.left) == -105)
+    {
+
+        _down_Pipe_Container.children[2].style.left = 1360 + "px";
+        _random_Height_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _down_Pipe_Container.children[2].style.height = `${_random_Height_Top}px`;
+
+        
+    }
+
+    // Pipe four down left to right.
+
+    if (parseInt(_down_Pipe_Container.children[3].style.left) == -105)
+    {
+
+        _down_Pipe_Container.children[3].style.left = 1360 + "px";
+        _random_Height_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _down_Pipe_Container.children[3].style.height = `${_random_Height_Top}px`;
+
+        
+    }
+
+    // Pipe five down left to right.
+
+    if (parseInt(_down_Pipe_Container.children[4].style.left) == -105)
+    {
+
+        _down_Pipe_Container.children[4].style.left = 1360 + "px";
+        _random_Height_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _down_Pipe_Container.children[4].style.height = `${_random_Height_Top}px`;
+
+        
+    }
+
+    // Pipe six down left to right.
+
+    if (parseInt(_down_Pipe_Container.children[5].style.left) == -105)
+    {
+
+        _down_Pipe_Container.children[5].style.left = 1360 + "px";
+        _random_Height_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _down_Pipe_Container.children[5].style.height = `${_random_Height_Top}px`;
+
+        
+    }
+
+    // Pipe seven down left to right.
+
+    if (parseInt(_down_Pipe_Container.children[6].style.left) == -105)
+    {
+
+        _down_Pipe_Container.children[6].style.left = 1360 + "px";
+        _random_Height_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _down_Pipe_Container.children[6].style.height = `${_random_Height_Top}px`;
+
+        
+    }
+
+    requestAnimationFrame(_pipe_Down_Animation);
+
+};
+
+_pipe_Down_Animation();
+
+// Pipe top
+
+const _top_Pipe_Container = document.querySelector("._pipe_Container ._top_Pipe_Container");
+
+let _random_Height_Top_Top;
+
+for(let _index = 0, _left = 30; _index < _top_Pipe_Container.children.length; _index++, _left += 200)
+{
+
+    _top_Pipe_Container.children[_index].style.left = `${_left}px`;
+    _top_Pipe_Container.children[_index].setAttribute("draggable", "false");
+
+    _random_Height_Top_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+    _top_Pipe_Container.children[_index].style.height = `${_random_Height_Top_Top}px`;
+    
+}
+
+let _left_For_Animation_Top = 5;
+
+function _pipe_Top_Animation()
+{
+    
+    // Pipe 1 to 7 top left to right.
+    
+    _top_Pipe_Container.children[0].style.left = parseInt(_top_Pipe_Container.children[0].style.left) - _left_For_Animation_Top + "px";
+    _top_Pipe_Container.children[1].style.left = parseInt(_top_Pipe_Container.children[1].style.left) - _left_For_Animation_Top + "px";
+    _top_Pipe_Container.children[2].style.left = parseInt(_top_Pipe_Container.children[2].style.left) - _left_For_Animation_Top + "px";
+    _top_Pipe_Container.children[3].style.left = parseInt(_top_Pipe_Container.children[3].style.left) - _left_For_Animation_Top + "px";
+    _top_Pipe_Container.children[4].style.left = parseInt(_top_Pipe_Container.children[4].style.left) - _left_For_Animation_Top + "px";
+    _top_Pipe_Container.children[5].style.left = parseInt(_top_Pipe_Container.children[5].style.left) - _left_For_Animation_Top + "px";
+    _top_Pipe_Container.children[6].style.left = parseInt(_top_Pipe_Container.children[6].style.left) - _left_For_Animation_Top + "px";
+
+    if (parseInt(_top_Pipe_Container.children[0].style.left) == -105)
+    {
+        
+        _top_Pipe_Container.children[0].style.left = 1360 + "px";
+        _random_Height_Top_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _top_Pipe_Container.children[0].style.height = `${_random_Height_Top_Top}px`;
+
+        
+    }
+
+    // Pipe two down left to right.
+
+
+    if (parseInt(_top_Pipe_Container.children[1].style.left) == -105)
+    {
+
+        _top_Pipe_Container.children[1].style.left = 1360 + "px";
+        _random_Height_Top_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _top_Pipe_Container.children[1].style.height = `${_random_Height_Top_Top}px`;
+
+        
+    }
+
+    // Pipe three down left to right.
+
+
+    if (parseInt(_top_Pipe_Container.children[2].style.left) == -105)
+    {
+
+        _top_Pipe_Container.children[2].style.left = 1360 + "px";
+        _random_Height_Top_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _top_Pipe_Container.children[2].style.height = `${_random_Height_Top_Top}px`;
+
+        
+    }
+
+    // Pipe four down left to right.
+
+
+    if (parseInt(_top_Pipe_Container.children[3].style.left) == -105)
+    {
+
+        _top_Pipe_Container.children[3].style.left = 1360 + "px";
+        _random_Height_Top_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _top_Pipe_Container.children[3].style.height = `${_random_Height_Top_Top}px`;
+
+        
+    }
+
+    // Pipe five down left to right.
+
+
+    if (parseInt(_top_Pipe_Container.children[4].style.left) == -105)
+    {
+
+        _top_Pipe_Container.children[4].style.left = 1360 + "px";
+        _random_Height_Top_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _top_Pipe_Container.children[4].style.height = `${_random_Height_Top_Top}px`;
+
+        
+    }
+
+    // Pipe six down left to right.
+
+
+    if (parseInt(_top_Pipe_Container.children[5].style.left) == -105)
+    {
+
+        _top_Pipe_Container.children[5].style.left = 1360 + "px";
+        _random_Height_Top_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _top_Pipe_Container.children[5].style.height = `${_random_Height_Top_Top}px`;
+
+        
+    }
+
+    // Pipe seven down left to right.
+
+
+    if (parseInt(_top_Pipe_Container.children[6].style.left) == -105)
+    {
+
+        _top_Pipe_Container.children[6].style.left = 1360 + "px";
+        _random_Height_Top_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _top_Pipe_Container.children[6].style.height = `${_random_Height_Top_Top}px`;
+
+        
+    }
+
+    requestAnimationFrame(_pipe_Top_Animation);
+
+};
+
+_pipe_Top_Animation();
