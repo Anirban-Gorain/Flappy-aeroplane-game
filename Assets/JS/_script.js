@@ -357,3 +357,133 @@ function _pipe_Top_Animation()
 };
 
 _pipe_Top_Animation();
+
+// Aeroplane controls
+
+const _aeroplane_Controller = document.querySelector("._aeroplane_And_Front_Fan_Of_Aeroplane_Container #_aeroplane_Controller");
+
+let _clint_Rect;
+
+document.addEventListener("keydown", (_event) =>
+{
+
+    _clint_Rect = _aeroplane_Controller.getBoundingClientRect();    
+
+    if (_event.key == "ArrowUp")
+    {
+        
+        if(_clint_Rect.top != 3)
+        _aeroplane_Controller.style.top = _clint_Rect.top - 8 + "px";
+        
+    }
+    else if(_event.key == "ArrowDown")
+    {
+
+        if(_clint_Rect.top != 523)
+        _aeroplane_Controller.style.top = _clint_Rect.top + 8 + "px";
+
+    }
+    else if(_event.key == "ArrowLeft")
+    {
+
+        _left_For_Animation_Top = 2;
+        _left_For_Animation = 2;
+        _right = 6
+        _left = 1;
+
+        if(_clint_Rect.left != 2)
+        {
+
+            _aeroplane_Controller.style.left = _clint_Rect.left - 2 + "px";
+
+        }
+        
+    }
+    else if(_event.key == "ArrowRight")
+    {
+
+        _left_For_Animation_Top = 8;
+        _left_For_Animation = 8;
+        _right = 14;
+        _left = 7;
+        
+        if(_clint_Rect.left != 1178)
+
+        _aeroplane_Controller.style.left = _clint_Rect.left + 8 + "px";
+        
+    }
+    
+});
+
+document.addEventListener("keyup", (_event) =>
+{
+
+    if (_event.key == "ArrowLeft")
+    {
+
+        _left_For_Animation_Top = 5;
+        _left_For_Animation = 5;
+        _right = 10;
+        _left = 4;
+        
+    }
+
+    if (_event.key == "ArrowRight")
+    {
+
+        _left_For_Animation_Top = 5;
+        _left_For_Animation = 5;
+        _right = 10;
+        _left = 4;
+        
+    }
+
+});
+
+
+// Opposite aeroplane
+
+const _opposite_Aeroplane = document.querySelector("#_opposite_Aeroplane");
+let _left = 4;
+let _to_Cancel_Animation_Frame;
+
+let _danger_Sound = new Audio();
+_danger_Sound.src = "Assets/Musics/_danger_Alarm.mp3";
+_danger_Sound.volume = 0.2;
+_danger_Sound.loop = true;
+
+setInterval(() =>
+{
+
+    _danger_Sound.play();
+
+    setTimeout(() =>
+    {
+        
+    }, 1000 * 4);
+    _opposite_Aeroplane_Animation();
+
+
+}, 1000 * 30);
+
+function _opposite_Aeroplane_Animation()
+{
+
+    _opposite_Aeroplane.style.left = parseInt((_opposite_Aeroplane.getBoundingClientRect().left)) - _left + "px";
+    console.log();
+
+    _to_Cancel_Animation_Frame = requestAnimationFrame(_opposite_Aeroplane_Animation);
+
+    if (parseInt((_opposite_Aeroplane.getBoundingClientRect().left)) < -400)
+    {
+
+        _opposite_Aeroplane.style.left =  1380 + "px";
+        cancelAnimationFrame(_to_Cancel_Animation_Frame);
+
+        _danger_Sound.pause();
+        _danger_Sound.currentTime = 0;
+        
+    }
+
+    
+}

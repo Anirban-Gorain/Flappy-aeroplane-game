@@ -212,3 +212,75 @@
     top: 0px;
     
 }
+
+/* Aeroplane */
+
+._aeroplane_And_Front_Fan_Of_Aeroplane_Container
+{
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+
+}
+
+._aeroplane_And_Front_Fan_Of_Aeroplane_Container ._combined_Aeroplane
+{
+
+    position: relative;
+    top: 251px;
+    left: 10px;
+    width: 180px;
+    height: 105px;
+
+}
+
+._aeroplane_And_Front_Fan_Of_Aeroplane_Container ._combined_Aeroplane img
+{
+
+    position: absolute;
+
+}
+
+._front_Fan
+{
+
+    animation: _front_Fan 0.100s linear infinite;
+
+}
+
+@keyframes _front_Fan
+{
+
+    from
+    {
+
+        transform: rotateX(100deg);
+
+    }
+    to
+    {
+
+        transform: rotateX(-100deg);
+
+    }
+
+}
+
+._bg
+{
+
+    /* background-color: rgb(255, 0, 0); */
+
+}
+
+._aeroplane_And_Front_Fan_Of_Aeroplane_Container #_opposite_Aeroplane
+{
+
+    position: absolute;
+    top: 250px;
+    left: 1380px;
+}
