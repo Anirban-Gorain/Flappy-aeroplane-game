@@ -2,24 +2,23 @@
 
 const _mountain_Images = document.querySelectorAll("._mountain_Images img");
 
-let _right = 1;
+let _right = 10;
 
 _mountain_Animation();
 
 function _mountain_Animation()
 {
 
-    _mountain_Images[0].style.right = `${_right}px`;
-    _mountain_Images[1].style.left = `${1366 - _right}px`;
+    _mountain_Images[0].style.right = ((_mountain_Images[0].getBoundingClientRect().left * -1) + _right + "px");;
+    _mountain_Images[1].style.left = ((_mountain_Images[1].getBoundingClientRect().left) - _right + "px");
     
-    if (_right == 1369)
+    if ((_mountain_Images[0].getBoundingClientRect().left) < -1370)
     {
 
-        _right = 1;
+        _mountain_Images[0].style.right = 1 + "px";
+        _mountain_Images[1].style.left = 1366 + "px";
         
     }
-
-    _right += 8;
 
     requestAnimationFrame(_mountain_Animation);
     
@@ -35,7 +34,7 @@ let _sky = document.querySelector("._sky");
 
 let _rain_Noise = new Audio;
 _rain_Noise.src = "/Assets/Musics/_rain_Noise.wav";
-_rain_Noise.volume = 0.2;
+_rain_Noise.volume = 0.1;
 _rain_Noise.loop = true;
 
 
@@ -145,7 +144,7 @@ function _pipe_Down_Animation()
     _down_Pipe_Container.children[5].style.left = parseInt(_down_Pipe_Container.children[5].style.left) - _left_For_Animation + "px";
     _down_Pipe_Container.children[6].style.left = parseInt(_down_Pipe_Container.children[6].style.left) - _left_For_Animation + "px";
 
-    if (parseInt(_down_Pipe_Container.children[0].style.left) == -105)
+    if (parseInt(_down_Pipe_Container.children[0].style.left) < -105)
     {
 
         _down_Pipe_Container.children[0].style.left = 1360 + "px";
@@ -157,7 +156,7 @@ function _pipe_Down_Animation()
 
     // Pipe two down left to right.
 
-    if (parseInt(_down_Pipe_Container.children[1].style.left) == -105)
+    if (parseInt(_down_Pipe_Container.children[1].style.left) < -105)
     {
 
         _down_Pipe_Container.children[1].style.left = 1360 + "px";
@@ -169,7 +168,7 @@ function _pipe_Down_Animation()
 
     // Pipe three down left to right.
 
-    if (parseInt(_down_Pipe_Container.children[2].style.left) == -105)
+    if (parseInt(_down_Pipe_Container.children[2].style.left) < -105)
     {
 
         _down_Pipe_Container.children[2].style.left = 1360 + "px";
@@ -181,7 +180,7 @@ function _pipe_Down_Animation()
 
     // Pipe four down left to right.
 
-    if (parseInt(_down_Pipe_Container.children[3].style.left) == -105)
+    if (parseInt(_down_Pipe_Container.children[3].style.left) < -105)
     {
 
         _down_Pipe_Container.children[3].style.left = 1360 + "px";
@@ -193,7 +192,7 @@ function _pipe_Down_Animation()
 
     // Pipe five down left to right.
 
-    if (parseInt(_down_Pipe_Container.children[4].style.left) == -105)
+    if (parseInt(_down_Pipe_Container.children[4].style.left) < -105)
     {
 
         _down_Pipe_Container.children[4].style.left = 1360 + "px";
@@ -205,7 +204,7 @@ function _pipe_Down_Animation()
 
     // Pipe six down left to right.
 
-    if (parseInt(_down_Pipe_Container.children[5].style.left) == -105)
+    if (parseInt(_down_Pipe_Container.children[5].style.left) < -105)
     {
 
         _down_Pipe_Container.children[5].style.left = 1360 + "px";
@@ -217,7 +216,7 @@ function _pipe_Down_Animation()
 
     // Pipe seven down left to right.
 
-    if (parseInt(_down_Pipe_Container.children[6].style.left) == -105)
+    if (parseInt(_down_Pipe_Container.children[6].style.left) < -105)
     {
 
         _down_Pipe_Container.children[6].style.left = 1360 + "px";
@@ -265,7 +264,7 @@ function _pipe_Top_Animation()
     _top_Pipe_Container.children[5].style.left = parseInt(_top_Pipe_Container.children[5].style.left) - _left_For_Animation_Top + "px";
     _top_Pipe_Container.children[6].style.left = parseInt(_top_Pipe_Container.children[6].style.left) - _left_For_Animation_Top + "px";
 
-    if (parseInt(_top_Pipe_Container.children[0].style.left) == -105)
+    if (parseInt(_top_Pipe_Container.children[0].style.left) < -105)
     {
         
         _top_Pipe_Container.children[0].style.left = 1360 + "px";
@@ -278,7 +277,7 @@ function _pipe_Top_Animation()
     // Pipe two down left to right.
 
 
-    if (parseInt(_top_Pipe_Container.children[1].style.left) == -105)
+    if (parseInt(_top_Pipe_Container.children[1].style.left) < -105)
     {
 
         _top_Pipe_Container.children[1].style.left = 1360 + "px";
@@ -291,7 +290,7 @@ function _pipe_Top_Animation()
     // Pipe three down left to right.
 
 
-    if (parseInt(_top_Pipe_Container.children[2].style.left) == -105)
+    if (parseInt(_top_Pipe_Container.children[2].style.left) < -105)
     {
 
         _top_Pipe_Container.children[2].style.left = 1360 + "px";
@@ -304,7 +303,7 @@ function _pipe_Top_Animation()
     // Pipe four down left to right.
 
 
-    if (parseInt(_top_Pipe_Container.children[3].style.left) == -105)
+    if (parseInt(_top_Pipe_Container.children[3].style.left) < -105)
     {
 
         _top_Pipe_Container.children[3].style.left = 1360 + "px";
@@ -317,7 +316,7 @@ function _pipe_Top_Animation()
     // Pipe five down left to right.
 
 
-    if (parseInt(_top_Pipe_Container.children[4].style.left) == -105)
+    if (parseInt(_top_Pipe_Container.children[4].style.left) < -105)
     {
 
         _top_Pipe_Container.children[4].style.left = 1360 + "px";
@@ -330,7 +329,7 @@ function _pipe_Top_Animation()
     // Pipe six down left to right.
 
 
-    if (parseInt(_top_Pipe_Container.children[5].style.left) == -105)
+    if (parseInt(_top_Pipe_Container.children[5].style.left) < -105)
     {
 
         _top_Pipe_Container.children[5].style.left = 1360 + "px";
@@ -343,11 +342,11 @@ function _pipe_Top_Animation()
     // Pipe seven down left to right.
 
 
-    if (parseInt(_top_Pipe_Container.children[6].style.left) == -105)
+    if (parseInt(_top_Pipe_Container.children[6].style.left) < -105)
     {
 
         _top_Pipe_Container.children[6].style.left = 1360 + "px";
-        _random_Height_Top_Top = Math.floor(Math.random() * (250 - 100) + 100); ;
+        _random_Height_Top_Top = Math.floor(Math.random() * (250 - 100) + 100);
         _top_Pipe_Container.children[6].style.height = `${_random_Height_Top_Top}px`;
 
         

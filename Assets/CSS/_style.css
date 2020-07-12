@@ -89,6 +89,7 @@
 
     /* background-color: rgba(31, 3, 3, 0.438); */
     width: 100%;
+    right: 1px;
     position: absolute;
     bottom: 0px;
 
@@ -97,7 +98,7 @@
 ._mountain_Images img:nth-child(2)
 {
 
-    left: -1366px;
+    left: 1366px;
     /* background-color: rgba(255, 255, 255, 0.411); */
 
 }
