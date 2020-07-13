@@ -277,3 +277,155 @@
     top: 250px;
     left: 1380px;
 }
+
+/* Collision */
+
+._fire_Container
+{
+
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+
+}
+
+._fire_Container img
+{
+
+    width: 180px;
+    height: 105px;
+    transition: 2s linear all;
+
+}
+
+._fire_Container :nth-child(1)
+{
+
+    animation: _fire_Left_Right_Movement 0.2s linear infinite;
+
+}
+
+@keyframes _fire_Left_Right_Movement
+{
+
+    _fire_Left_Right_Movement
+    {
+
+        margin-left: 5px;
+
+    }
+    to
+    {
+
+        margin-left: -5px;
+
+    }
+
+}
+
+._collision_Animation
+{
+
+    animation: _collision_Animation_ 8s ease-out;
+
+}
+
+@keyframes _collision_Animation_
+{
+
+    to
+    {
+
+        top: 1360px;
+        transform: rotate(180deg);
+
+    }
+
+}
+
+._collision_Text
+{
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 10%;
+    padding-left: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: linear-gradient(-70deg, rgba(0, 0, 0, 0.664), rgba(163, 2, 77, 0.63));
+    width: 100%;
+    height: 100%;
+    font-size: larger;
+    transition: 0.100s all ease-in; 
+    z-index: 5;
+
+}
+
+._collision_Text h2
+{
+
+    position: relative;
+    top: 10px;
+    
+}
+
+._collision_Text :nth-child(3)
+{
+
+    position: relative;
+    top: 20px;
+    
+}
+
+._collision_Text span
+{
+
+    color: rgb(136, 224, 224);
+    font-size: 2.2rem;
+    
+}
+
+._collision_Text button
+{
+
+    position: relative;
+    top: 33px;
+    left: 0px;
+    width: 141px;
+    height: 48px;
+
+}
+
+._button
+{
+    border: 2px solid rgb(0, 0, 0);
+    outline: 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.100s ease-in;
+}
+
+._button:hover
+{
+
+    background-color: rgb(0, 0, 0);
+    border-color: white;
+    color: rgb(222, 224, 136);
+    box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0.137);
+
+}
+
+._collision_Text a
+{
+
+    position: absolute;
+    left: 30%;
+    top: 95%;
+    color: white;
+    font-size: 1rem;
+
+}
