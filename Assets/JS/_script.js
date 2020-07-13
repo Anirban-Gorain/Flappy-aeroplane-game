@@ -1,3 +1,6 @@
+document.onload
+{
+
 // Mountain animation.
 
 const _mountain_Images = document.querySelectorAll("._mountain_Images img");
@@ -755,3 +758,5 @@ function _execute_Collision_Checkers_Functions_Infinite_Time()
 
 _execute_Collision_Checkers_Functions_Infinite_Time();
 
+
+}
