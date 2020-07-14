@@ -34,3 +34,57 @@
     margin-top: 100px;
 
 }
+
+/* Content over the slider */
+
+._content_Container
+{
+
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    text-align: center;
+    color: white;
+
+}
+
+._overlay
+{
+    
+    background-color: rgba(0, 0, 0, 0.507);
+
+}
+
+._content_Container h1
+{
+
+    position: relative;
+    top: 30%;
+    cursor: default;
+    font-family: "Roboto";
+    font-size: 3rem;
+
+}
+
+._content_Container h4
+{
+
+    position: relative;
+    top: 35%;
+    cursor: default;
+    font-family: "Montserrat";
+    font-size: 1.4rem;
+
+
+}
+
+._content_Container h1 q
+{
+
+    quotes: '\275D' '\275E';
+
+}
