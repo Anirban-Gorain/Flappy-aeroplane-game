@@ -20,16 +20,118 @@
 
     <!-- Google fonts -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+    <div class="swiper-container" id="_home">
+
+        <!-- Additional required wrapper -->
+
+        <div class="swiper-wrapper">
+
+            <!-- Slides -->
+
+            <div class="swiper-slide">
+
+                <h1>Image 1</h1>
+
+            </div>
+
+            <div class="swiper-slide">
+
+                <h1>Image 2</h1>
+
+            </div>
+
+            <div class="swiper-slide">
+
+                <h1>Image 3</h1>
+
+            </div>
+
+            <div class="swiper-slide">
+
+                <h1>Image 4</h1>
+
+            </div>
+
+            <div class="swiper-slide">
+
+                <h1>Image 5</h1>
+
+            </div>
+
+            <div class="swiper-slide">
+
+                <h1>Image 6</h1>
+
+            </div>
+
+            
+        </div>
+
+        <!-- If we need pagination -->
+
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+
     <!-- Slider js file -->
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 
+    <script>
+
+        document.onload
+        {
+
+            var mySwiper = new Swiper('.swiper-container',
+            {
+
+                // Optional parameters
+
+                direction: 'horizontal',
+                loop: true,
+
+                // If we need pagination
+
+                pagination: 
+                {
+
+                    el: '.swiper-pagination',
+
+                },
+
+                // Navigation arrows
+
+                navigation: 
+                {
+
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+
+                },
+                autoplay:
+                {
+
+                    delay: (1000 * 4),
+                    disableOnInteraction: false,
+
+                },
+
+            });
+
+        }
+
+    </script>
     
 </body>
 
