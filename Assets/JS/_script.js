@@ -721,6 +721,10 @@ function _collision_Time()
 
         _after_Collision_Can_Key_Events_Will_Workable = false;
 
+        // Stopping the score.
+
+        clearInterval(_clear_Set_Interval_Of_Score);
+        
         setTimeout(() =>
         {
 
@@ -767,6 +771,11 @@ function _collision_Time()
 
                 _after_Collision_Can_Key_Events_Will_Workable = true;
 
+                // Starting the score again.
+
+                _score = 0;
+                _score_Calculator();
+
                 setTimeout(() => 
                 {
 
@@ -805,5 +814,36 @@ function _execute_Collision_Checkers_Functions_Infinite_Time()
 
 _execute_Collision_Checkers_Functions_Infinite_Time();
 
+// Score functionality.
+
+let _clear_Set_Interval_Of_Score;
+
+function _score_Calculator()
+{
+
+    if(localStorage.getItem("_highest_Score") === null)
+    {
+
+        localStorage.setItem("_highest_Score");
+
+    }
+
+    _clear_Set_Interval_Of_Score = setInterval(function ()
+    {
+
+        _score++;
+
+        console.log("Calling");
+
+        if(parseInt(localStorage.getItem("_highest_Score")) < _score)
+        localStorage.setItem("_highest_Score", _score);
+        
+    }, 1000 * 2);
+
+    
+    
+}
+
+_score_Calculator();
 
 }
