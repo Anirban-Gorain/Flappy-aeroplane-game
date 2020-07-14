@@ -366,54 +366,60 @@ _pipe_Top_Animation();
 const _aeroplane_Controller = document.querySelector("._aeroplane_And_Front_Fan_Of_Aeroplane_Container #_aeroplane_Controller");
 
 let _clint_Rect;
+let _after_Collision_Can_Key_Events_Will_Workable = true;
 
 document.addEventListener("keydown", (_event) =>
 {
 
     _clint_Rect = _aeroplane_Controller.getBoundingClientRect();    
 
-    if (_event.key == "ArrowUp")
-    {
-        
-        if(_clint_Rect.top != 3)
-        _aeroplane_Controller.style.top = _clint_Rect.top - 8 + "px";
-        
-    }
-    else if(_event.key == "ArrowDown")
+    if(_after_Collision_Can_Key_Events_Will_Workable == true)
     {
 
-        if(_clint_Rect.top != 523)
-        _aeroplane_Controller.style.top = _clint_Rect.top + 8 + "px";
-
-    }
-    else if(_event.key == "ArrowLeft")
-    {
-
-        _left_For_Animation_Top = 2;
-        _left_For_Animation = 2;
-        _right = 6
-        _left = 1;
-
-        if(_clint_Rect.left != 2)
+        if (_event.key == "ArrowUp")
+        {
+            
+            if(_clint_Rect.top != 3)
+            _aeroplane_Controller.style.top = _clint_Rect.top - 8 + "px";
+            
+        }
+        else if(_event.key == "ArrowDown")
         {
 
-            _aeroplane_Controller.style.left = _clint_Rect.left - 2 + "px";
+            if(_clint_Rect.top != 523)
+            _aeroplane_Controller.style.top = _clint_Rect.top + 8 + "px";
 
         }
-        
-    }
-    else if(_event.key == "ArrowRight")
-    {
+        else if(_event.key == "ArrowLeft")
+        {
 
-        _left_For_Animation_Top = 8;
-        _left_For_Animation = 8;
-        _right = 14;
-        _left = 7;
-        
-        if(_clint_Rect.left != 1178)
+            _left_For_Animation_Top = 2;
+            _left_For_Animation = 2;
+            _right = 6
+            _left = 1;
 
-        _aeroplane_Controller.style.left = _clint_Rect.left + 8 + "px";
-        
+            if(_clint_Rect.left != 2)
+            {
+
+                _aeroplane_Controller.style.left = _clint_Rect.left - 2 + "px";
+
+            }
+            
+        }
+        else if(_event.key == "ArrowRight")
+        {
+
+            _left_For_Animation_Top = 8;
+            _left_For_Animation = 8;
+            _right = 14;
+            _left = 7;
+            
+            if(_clint_Rect.left != 1178)
+
+            _aeroplane_Controller.style.left = _clint_Rect.left + 8 + "px";
+            
+        }
+
     }
     
 });
@@ -456,6 +462,9 @@ _danger_Sound.src = "Assets/Musics/_danger_Alarm.mp3";
 _danger_Sound.volume = 0.2;
 _danger_Sound.loop = true;
 
+function _to_Start_Multiple_Time_The_Opposite_Aeroplane_Animation()
+{
+
 _control_opposite_Aeroplane_Interval = setInterval(() =>
 {
 
@@ -469,6 +478,10 @@ _control_opposite_Aeroplane_Interval = setInterval(() =>
 
 
 }, 1000 * 30);
+
+}
+
+_to_Start_Multiple_Time_The_Opposite_Aeroplane_Animation();
 
 function _opposite_Aeroplane_Animation()
 {
@@ -683,13 +696,13 @@ function _collision_Detection_For_Opposite_Aeroplane()
     
 }
 
-// When will be collision what will be then.
+// When will be collision what will be then, so the these code for this.
 
 let _one_Time = true;
 
 // The main motive to declare the score variable here for the scope issue.
 
-let _score = 9;
+let _score = 0;
 
 function _collision_Time()
 {
@@ -703,6 +716,10 @@ function _collision_Time()
         // Canceling the opposite aeroplane function caller interval.
 
         clearInterval(_control_opposite_Aeroplane_Interval);
+
+        // Turn offing key events.
+
+        _after_Collision_Can_Key_Events_Will_Workable = false;
 
         setTimeout(() =>
         {
@@ -729,11 +746,41 @@ function _collision_Time()
             _collision_Text_Container.innerHTML = _collision_Text;
             _collision_Text_Container.setAttribute("class", "_collision_Text");
             
+           // Play again functionality.
 
+           
+            document.querySelector("._button").addEventListener("click", function ()
+            {
+
+                _one_Time = true;
+
+                _to_Start_Multiple_Time_The_Opposite_Aeroplane_Animation();
+
+                document.querySelector("._fire_Container").style.visibility = "hidden";
+
+                document.querySelector("._combined_Aeroplane").style.visibility = "visible";
+                document.querySelector("._combined_Aeroplane").style.top = "252px"
+                document.querySelector("._combined_Aeroplane").style.left = "10px";
+                document.querySelector("._combined_Aeroplane").classList.remove("_collision_Animation");
+
+                // Turn on the key events.
+
+                _after_Collision_Can_Key_Events_Will_Workable = true;
+
+                setTimeout(() => 
+                {
+
+                    // Deleting the after collision section.
+    
+                    _collision_Text_Container.remove();
+                    
+                }, 500);
+
+            });
 
             document.querySelector("._combined_Aeroplane").style.visibility = "hidden";
             document.querySelector("._fire_Container").style.visibility = "hidden";
-            
+
         }, 1000 * 5);
 
         _one_Time = false;
