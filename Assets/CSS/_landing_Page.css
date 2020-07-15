@@ -153,3 +153,27 @@ nav ul li a
     text-decoration: none;
 
 }
+
+/* Play */
+
+/* Developer */
+
+#_play
+{
+
+    width: 100%;
+    height: 100vh;
+    background-color: lightcoral;
+
+}
+
+/* Developer */
+
+#_developer
+{
+
+    width: 100%;
+    height: 100vh;
+    background-color: darkcyan;
+
+}

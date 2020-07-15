@@ -106,61 +106,25 @@
         <ul>
 
             <li><a href="#_home">Home</a></li>
-            <li><a href="">Play</a></li>
-            <li><a href="">Developer</a></li>
+            <li><a href="#_play">Play</a></li>
+            <li><a href="#_developer">Developer</a></li>
 
         </ul>
 
     </nav>
 
+    <!-- Play -->
+
+    <div id="_play"></div>
+
+    <!-- Developer -->
+
+    <div id="_developer"></div>
+
     <!-- Slider js file -->
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-
-    <script>
-
-        document.onload
-        {
-
-            var mySwiper = new Swiper('.swiper-container',
-            {
-
-                // Optional parameters
-
-                direction: 'horizontal',
-                loop: true,
-
-                // If we need pagination
-
-                pagination: 
-                {
-
-                    el: '.swiper-pagination',
-
-                },
-
-                // Navigation arrows
-
-                navigation: 
-                {
-
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-
-                },
-                autoplay:
-                {
-
-                    delay: (1000 * 4),
-                    disableOnInteraction: false,
-
-                },
-
-            });
-
-        }
-
-    </script>
+    <script src="/Assets/JS/_landing_Page.js"></script>
     
 </body>
 
