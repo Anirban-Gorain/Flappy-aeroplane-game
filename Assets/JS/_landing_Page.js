@@ -98,3 +98,34 @@ for(_one_By_One_Each_Element of _li_Tags)
     _odd_Position_Li++;
 
 }
+
+// User name section for play and play button.
+
+const _name = document.querySelector("#_name");
+const _play_Button = document.querySelector("#_play_Button");
+
+let _criteria = /^[a-zA-Z\-]+$/;
+
+_play_Button.addEventListener("click", () => 
+{
+
+    if((_name.value.length >= 10 && _name.value.length <= 20) && _name.value.match(_criteria))
+    {
+
+        document.querySelector("#_error_Message").style.display = "none";
+        
+        // Setting the user name for the high score functionality.
+
+        localStorage.setItem("_name", _name.value);
+        
+        window.location.href = "_game.htm";
+
+    } 
+    else
+    {
+
+        document.querySelector("#_error_Message").style.display = "block";
+
+    }
+
+}); 
