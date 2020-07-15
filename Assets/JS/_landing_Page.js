@@ -38,12 +38,3 @@ document.onload
     });
 
 }
-
-// To get smooth scroll.
-
-document.scrollBy(
-{ 
-
-    behavior: 'smooth' 
-
-});
