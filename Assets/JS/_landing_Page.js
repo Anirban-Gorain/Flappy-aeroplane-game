@@ -79,3 +79,22 @@ window.addEventListener("scroll", () =>
 
     
 });
+
+// On the manual guide section which li tags used making two consecutive two li tag's color different to a gives better reading experience.
+
+const _li_Tags = document.querySelectorAll("#_play ._guide ul li");
+let _odd_Position_Li = 1;
+
+for(_one_By_One_Each_Element of _li_Tags)
+{
+
+    if(!(_odd_Position_Li & 1))
+    {
+
+        _one_By_One_Each_Element.style.color = "rgb(253, 242, 140)";
+
+    }
+
+    _odd_Position_Li++;
+
+}
