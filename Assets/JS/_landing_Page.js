@@ -118,7 +118,7 @@ _play_Button.addEventListener("click", () =>
 
         localStorage.setItem("_name", _name.value);
         
-        window.location.href = "_game.htm";
+        window.open("_game.htm", "_blank");
 
     } 
     else
