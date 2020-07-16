@@ -129,3 +129,67 @@ _play_Button.addEventListener("click", () =>
     }
 
 }); 
+
+// Contact form validation.
+
+const _user_Name = document.querySelector("#_user_Name");
+const _user_Mail_Address = document.querySelector("#_user_Mail_Address");
+const _user_Message = document.querySelector("#_user_Message");
+const _form = document.querySelector("#_form");
+
+const _user_Name_Error = document.querySelector("#_user_Name_Error");
+const _mail_Error_ = document.querySelector("#_mail_Error");
+const _message_Error = document.querySelector("#_message_Error");
+
+const _mail_Criteria = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+// Conditions.
+
+_form.addEventListener("submit", (_event) =>
+{
+
+    if(!((_user_Name.value.length >= 10 && _user_Name.value.length <= 20) && _user_Name.value.match(_criteria)))
+    {
+
+        _user_Name_Error.style.visibility = "visible";
+        _event.preventDefault();
+
+    }
+    else
+    {
+
+        _user_Name_Error.style.visibility = "hidden";
+
+    }
+
+    if(!(_user_Mail_Address.value.match(_mail_Criteria)))
+    {
+
+        _mail_Error_.style.visibility = "visible";
+        _event.preventDefault();
+
+    }
+    else
+    {
+
+        _mail_Error_.style.visibility = "hidden";
+
+    }
+
+    if(!(_user_Message.value.length >= 100))
+    {
+
+        _message_Error.style.visibility = "visible";
+        _event.preventDefault();
+
+    }
+    else
+    {
+
+        _message_Error.style.visibility = "none";
+
+    }
+
+
+
+});

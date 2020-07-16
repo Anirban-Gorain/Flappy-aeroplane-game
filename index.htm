@@ -132,9 +132,29 @@
         </div>
         <div class="_name_And_Play">
 
-            <input type="text" id="_name" autofocus="autofocus" placeholder="Enter your name">
+            <input type="text" id="_name" class="_form_Focus_Effect" autofocus="autofocus" placeholder="Enter your name">
             <div id="_error_Message">User name must be grater than 9 and less then 21 and Only alphabets are allowed.</div>
             <button id="_play_Button">PLAY NOW</button>
+
+            <!-- Issue register section -->
+
+            <h1>Contact me</h1>
+
+            <form action="/Assets/Server/_mail_Sender.php" method="POST" id="_form">
+            
+            
+                <input type="text" name="_name" placeholder="My name is xyz" class="_form_Focus_Effect" id="_user_Name">
+                <span id="_user_Name_Error" class="_form_Error_Style">User name must be grater than 9 and less then 21 and Only alphabets are allowed.</span>
+
+                <input type="text" name="_mail_Address"  placeholder="example@gmail.come" class="_form_Focus_Effect" id="_user_Mail_Address">
+                <span id="_mail_Error" class="_form_Error_Style">this email address is wrong, Entre a valid email address. </span>
+
+                <textarea name="_message" cols="30" rows="10" placeholder="I have to tell you some suggestions about this game, error, etc." class="_form_Focus_Effect" id="_user_Message"></textarea>
+                <span id="_message_Error"  class="_form_Error_Style">Message must be grater than 100 alphabets.</span>
+
+                <input type="submit" value="CLICK TO SEND" name="_submit" id="_submit_Button">
+            
+            </form>
 
         </div>
 

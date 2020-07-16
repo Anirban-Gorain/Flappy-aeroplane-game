@@ -824,7 +824,7 @@ function _score_Calculator()
     if(localStorage.getItem("_highest_Score") === null)
     {
 
-        localStorage.setItem("_highest_Score");
+        localStorage.setItem("_highest_Score", "0");
 
     }
 
@@ -833,7 +833,7 @@ function _score_Calculator()
 
         _score++;
 
-        console.log("Calling");
+        // console.log("Calling");
 
         if(parseInt(localStorage.getItem("_highest_Score")) < _score)
         localStorage.setItem("_highest_Score", _score);
