@@ -193,3 +193,9 @@ _form.addEventListener("submit", (_event) =>
 
 
 });
+
+// updating copyright date.
+
+let _date = new Date().getFullYear();
+
+document.querySelector("#_copy_Right_Year").innerText = _date;

@@ -376,8 +376,222 @@ nav ul li a
 #_developer
 {
 
+    position: relative;
     width: 100%;
     height: 100vh;
-    background-color: darkcyan;
+    background-color: rgb(246, 238, 238);
+
+}
+
+._profile_Image
+{
+
+
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 90px;
+    left: 50px;
+    background-image: url(/Assets/_Images/_my_Image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+
+}
+
+._typography_Content
+{
+
+    position: absolute;
+    top: 90px;
+    left: 350px;
+    width: 958px;
+    height: 300px;
+    line-height: 22px;
+    font-family: "Montserrat";
+
+}
+
+._typography_Content q
+{
+
+    quotes: '\275D' '\275E';
+
+}
+
+._social_Icons
+{
+
+    position: relative;
+    padding-left: 4%;
+    top: 100px;
+    width: 330px;
+    height: 60px;
+
+}
+
+._each_Icons
+{
+
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+
+}
+
+._each_Icons i
+{
+
+    position: relative;
+    top: 12px;
+    font-size: 1.3em;
+    color: rgb(0, 0, 0);
+
+}
+
+._instagram::before
+{
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: 0.100s all linear;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+
+}
+
+._instagram:hover::before
+{
+
+    visibility: visible;
+    animation: _social_Icon_Animation 1s linear;
+
+}
+
+._facebook::before
+{
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: 0.100s all linear;
+    background: linear-gradient(rgb(34, 158, 207) 50%, rgb(0, 132, 255) 100%);;
+
+}
+
+._facebook:hover::before
+{
+
+    visibility: visible;
+    animation: _social_Icon_Animation 1s linear;
+
+}
+
+._github::before
+{
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: 0.100s all linear;
+    background: linear-gradient(#808c97ef 50%, #2b3238fb 100%);;
+
+}
+
+._github:hover::before
+{
+
+    visibility: visible;
+    animation: _social_Icon_Animation 1s linear;
+
+}
+
+._linkedin::before
+{
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: 0.100s all linear;
+    background: linear-gradient(#0e76a8 50%, #b0f6f0fb 100%);;
+
+}
+
+._linkedin:hover::before
+{
+
+    visibility: visible;
+    animation: _social_Icon_Animation 1s linear;
+
+}
+
+@keyframes _social_Icon_Animation
+{
+
+    to
+    {
+
+        top: 30px;
+
+    }
+
+}
+
+#_developer hr
+{
+
+    position: relative;
+    width: 80%;
+    left: 10%;
+    top: 52%;
+
+}
+
+._copy_Right_Container
+{
+
+    position: relative;
+    width: 100%;
+    height: 35px;
+    top: 53.2%;
+    padding-top: 0.5%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: "Montserrat";
+    /* background-color: rgb(90, 23, 23); */
+
+}
+
+._copy_Right_Container span
+{
+
+    color: rgb(7, 190, 7);
 
 }
